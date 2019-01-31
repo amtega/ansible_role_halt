@@ -2,7 +2,7 @@
 # Role handlers
 
 - name: halt
-  shell: >-
+  command: >-
     sleep {{ halt_delay }}
     && shutdown now 'Ansible halt role triggered a halt'
   async: 1
