@@ -1,2 +1,16 @@
 ---
 # Role handlers
+
+- name: halt
+  shell: >-
+    sleep {{ halt_delay }}
+    && shutdown now 'Ansible halt role triggered a halt'
+  async: 1
+  poll: 0
+  changed_when: true
+  ignore_errors: true
+  listen: halt host
+  when:
+    - ansible_virtualization_type | default("") != "docker"
+    - not halt_disable
+  check_mode: no
