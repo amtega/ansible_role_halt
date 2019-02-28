@@ -31,3 +31,5 @@ dependencies:
       debian: 9
       fedora: 27
       rhel: 6
+    tags:
+      - role::halt
