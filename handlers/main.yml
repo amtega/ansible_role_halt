@@ -4,7 +4,7 @@
 - name: halt
   command: >-
     sleep {{ halt_delay }}
-    && shutdown now 'Ansible halt role triggered a halt'
+    && shutdown --poweroff now 'Ansible halt role triggered a halt'
   async: 1
   poll: 0
   changed_when: true
