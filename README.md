@@ -31,7 +31,7 @@ This is an example playbook:
   roles:
     - amtega.halt
   tasks:
-    - name: create file and halt
+    - name: Create file and halt
       copy:
         content: ""
         dest: /tmp/emptyfile1
