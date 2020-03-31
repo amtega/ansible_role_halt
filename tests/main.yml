@@ -18,7 +18,7 @@
   tags:
     - sandbox
 
-- name: test halt role
+- name: Test halt role
   hosts: docker_sandbox_containers
   roles:
     - amtega.halt
