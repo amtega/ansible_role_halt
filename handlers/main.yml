@@ -1,7 +1,7 @@
 ---
 # Role handlers
 
-- name: Halt
+- name: Halt # noqa ignore-errors
   shell: >-
     sleep {{ halt_delay }}
     && shutdown -h now 'Ansible halt role triggered a halt'
@@ -9,8 +9,8 @@
     warn: no
   async: 1
   poll: 0
-  changed_when: true
-  ignore_errors: true
+  changed_when: yes
+  ignore_errors: yes
   listen:
     - halt host
     - halt
