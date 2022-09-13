@@ -2,7 +2,7 @@
 # Role handlers
 
 - name: Halt # noqa ignore-errors
-  shell: >-
+  ansible.builtin.shell: >-
     sleep {{ halt_delay }}
     && shutdown -h now 'Ansible halt role triggered a halt'
   args:
